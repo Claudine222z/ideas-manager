@@ -1,0 +1,326 @@
+/* Tablet */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .header-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .project-actions {
+        align-self: stretch;
+        justify-content: flex-end;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .export-options {
+        gap: 0.75rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .topic-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .topic-actions {
+        order: -1;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .app-header {
+        padding: 0.75rem 0;
+    }
+
+    .header-content {
+        padding: 0 0.75rem;
+    }
+
+    .app-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-content {
+        padding: 1rem 0.75rem;
+    }
+
+    .project-card {
+        margin: 0 -0.25rem;
+    }
+
+    .project-header,
+    .project-body {
+        padding: 1rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .btn-small {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    .header-actions .btn {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .topic-item {
+        padding: 0.75rem;
+    }
+
+    .topic-header {
+        margin-bottom: 0.75rem;
+    }
+
+    .topic-actions .btn-small {
+        padding: 0.375rem 0.5rem;
+    }
+
+    .modal-content {
+        width: 98%;
+        margin: 0.5rem;
+        max-height: 95vh;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.875rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .add-topic-btn {
+        padding: 0.875rem;
+        font-size: 0.9rem;
+    }
+
+    .empty-state {
+        padding: 2rem 1rem;
+    }
+
+    .empty-state i {
+        font-size: 3rem;
+    }
+
+    .drag-handle {
+        padding: 0.5rem;
+        margin: -0.25rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .app-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-actions .btn {
+        min-width: auto;
+    }
+
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.8rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1rem;
+    }
+
+    .topic-actions {
+        gap: 0.125rem;
+    }
+
+    .topic-actions .btn-small {
+        padding: 0.25rem 0.375rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .modal-content {
+        max-height: 95vh;
+        width: 90%;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 0.75rem;
+    }
+
+    .empty-state {
+        padding: 1.5rem 1rem;
+    }
+
+    .empty-state i {
+        font-size: 2.5rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .project-card,
+    .topic-item,
+    .modal-content {
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card:hover {
+        box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .project-card:hover,
+    .topic-item:hover,
+    .add-topic-btn:hover,
+    .close-btn:hover {
+        transform: none;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    .topic-item {
+        cursor: grab;
+    }
+
+    .topic-item:active {
+        cursor: grabbing;
+    }
+
+    /* Increase touch targets */
+    .btn-small {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .close-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .drag-handle {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .modal-content {
+        animation: none;
+    }
+
+    .fade-in {
+        animation: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a202c;
+        --card-bg: #2d3748;
+        --text-primary: #f7fafc;
+        --text-secondary: #a0aec0;
+        --border-color: #4a5568;
+    }
+
+    body {
+        background: linear-gradient(135deg, #2d3748, #4a5568);
+    }
+
+    .topic-item {
+        background: #4a5568;
+    }
+
+    .add-topic-btn {
+        border-color: #4a5568;
+    }
+
+    .add-topic-btn:hover {
+        border-color: var(--primary-color);
+        background: rgba(102, 126, 234, 0.1);
+    }
+}
